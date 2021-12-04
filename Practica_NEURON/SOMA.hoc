@@ -1,0 +1,16 @@
+load_file("nrngui.hoc")
+nrncontrolmenu() 		// COMANDOS DE CONTROL DEL PROGRAMA
+
+create seccion 			// SE CREAN TANTAS SECCIONES COMO SEA NECESARIO
+seccion{
+diam=65
+L=65
+insert hh
+}
+access seccion
+
+objectvar stimulo 		// ESTÍMULOS PARA APLICAR A LAS SECCIONES
+stimulo = new IClamp(.5)
+stimulo.amp = 1
+stimulo.del = 2
+stimulo.dur = 2
